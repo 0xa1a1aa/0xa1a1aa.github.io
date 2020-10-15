@@ -11,8 +11,21 @@
 body {
   padding: 0px;
   margin: 0px;
+  color: var(--rich-black-fogra-39)
 }
 
 a {
+  color: var(--british-racing-green);
+}
+
+header {
+  background: var(--xiketic);
+  padding: 10px 50px;
+}
+header a {
     color: var(--granny-smith-apple);
+}
+
+.main {
+  padding: 10px 50px;
 }
