@@ -19,7 +19,7 @@ a {
 }
 
 header {
-  background: var(--xiketic);
+  background: #0e0e1bff;
   padding: 10px 50px;
 }
 header a {
