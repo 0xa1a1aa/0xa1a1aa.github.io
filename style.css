@@ -1,0 +1,18 @@
+/* color palette: https://coolors.co/020204-0e0e1b-204829-22b455-80ce87-92e5a1 */
+:root {
+  --rich-black-fogra-39: #020204ff;
+  --xiketic: #0e0e1bff;
+  --british-racing-green: #204829ff;
+  --green-pantone: #22b455ff;
+  --emerald: #80ce87ff;
+  --granny-smith-apple: #92e5a1ff;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+    color: var(--granny-smith-apple);
+}
