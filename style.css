@@ -1,21 +1,22 @@
-/* color palette: https://coolors.co/020204-0e0e1b-204829-22b455-80ce87-92e5a1 */
-:root {
+/* color palette: https://coolors.co/020204-0e0e1b-204829-22b455-80ce87-92e5a1
+
   --rich-black-fogra-39: #020204ff;
   --xiketic: #0e0e1bff;
   --british-racing-green: #204829ff;
   --green-pantone: #22b455ff;
   --emerald: #80ce87ff;
   --granny-smith-apple: #92e5a1ff;
-}
+
+*/
 
 body {
   padding: 0px;
   margin: 0px;
-  color: var(--rich-black-fogra-39);
+  color: #020204ff;
 }
 
 a {
-  color: var(--british-racing-green);
+  color: #204829ff;
 }
 
 header {
@@ -23,7 +24,7 @@ header {
   padding: 10px 50px;
 }
 header a {
-    color: var(--granny-smith-apple);
+    color: #92e5a1ff;
 }
 
 .main {
