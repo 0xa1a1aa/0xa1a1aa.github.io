@@ -21,7 +21,7 @@
 			<section>
 				<h3>Resources</h3>
 				<p>You can find the challenge <a href="https://github.com/ctf-wiki/ctf-challenges/tree/master/pwn/heap/use_after_free/hitcon-training-hacknote">here</a>.</p>
-				<p>The file <b>exp.py</b> is a fully working exploit, i.e. its a solution of the challenge. We will develop an almost identical solution in the Exploitation section.</p>
+				<p>The file <em>exp.py</em> is a fully working exploit, i.e. its a solution of the challenge. We will develop an almost identical solution in the Exploitation section.</p>
 			</section>
 			<section>
 				<h3>Testing & Research</h3>
@@ -32,7 +32,16 @@
 					<li>hacknote.c</li>
 				</ol>
 				<p>The file <em>flag</em> just contains the flag that we should get by exploiting the <em>hacknote</em> executable. Fortunately we are also given the source code of the executable in the <em>hacknote.c</em> file.</p>
-				<p>Ok so before we start to look into the C source file lets first execute the <em>hacknote</em> program in order to see what the executable does.</p>
+				<p>Before we start to look at the C source file lets first execute the <em>hacknote</em> program in order to see what the executable does.</p>
+				<img class="cmdline" src="https://raw.githubusercontent.com/oneiroi333/oneiroi333.github.io/master/writeups/random/use_after_free/images/menu.png" />
+				<p>After launching the program we are greeted by a small menu. We can either add, remove or print a note or just exit the program. So lets try to create a note and print it.</p>
+				<img class="cmdline" src="https://raw.githubusercontent.com/oneiroi333/oneiroi333.github.io/master/writeups/random/use_after_free/images/print_oob.png" />
+				<p>In the attempt to printing the first note by entering an index of 1 we got an error. Lets try it again with the index 0.</p>
+				<img class="cmdline" src="https://raw.githubusercontent.com/oneiroi333/oneiroi333.github.io/master/writeups/random/use_after_free/images/print_ok.png" />
+				<p>So far so good, we were able to create a note and print its content. But what happens if we create a note, delete it and then try to print it?</p>
+				<img class="cmdline" src="https://raw.githubusercontent.com/oneiroi333/oneiroi333.github.io/master/writeups/random/use_after_free/images/print_del_note_segfault.png" />
+				<p>... we get a segmentation fault! Interesting. So there is a bug in the program that causes the program to crash if we try to print a note that was already deleted. Maybe there is some way to exploit that vulnerability.</p>
+				<p>As a next step lets look into the source code to see how the program works. After looking at the code for some time we can identify some interesting things.</p>
 			</section>
 			<section>
 				<h3>Exploitation</h3>
