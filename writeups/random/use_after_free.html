@@ -32,8 +32,14 @@
 					<li>hacknote.c</li>
 				</ol>
 				<p>The file <em>flag</em> just contains the flag that we should get by exploiting the <em>hacknote</em> executable. Fortunately we are also given the source code of the executable in the <em>hacknote.c</em> file.</p>
-				<p>Ok so before we start to look into the C source file lets first execute the <em>hacknote</em> program in order to see what the executable does.</p>
-				<img src="images/menu.png" />
+				<p>Ok, so before we start to look at the C source file lets first execute the <em>hacknote</em> program in order to see what the executable does.</p>
+				<img class="cmdline" src="./images/menu.png" />
+				<p>After launching the program we are greeted by a small menu. We can either add, remove or print a note or just exit the program. So lets try to create a note and print it.</p>
+				<img class="cmdline" src="./images/print_oob.png" />
+				<p>In the attempt to printing the first note by giving an index of 1 we got an error. Lets try it again with the index 0.</p>
+				<img class="cmdline" src="./images/print_ok.png" />
+				<p>So far so good, we created a note and printed its content. But what happens if we create a note, delete it and then try to print it?</p>
+				<img class="cmdline" src="./images/print_del_note_segfault.png" />
 			</section>
 			<section>
 				<h3>Exploitation</h3>
