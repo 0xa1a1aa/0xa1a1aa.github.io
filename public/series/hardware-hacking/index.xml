@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hardware Hacking on yet another hacking blog</title>
+    <link>http://localhost:1313/series/hardware-hacking/</link>
+    <description>Recent content in Hardware Hacking on yet another hacking blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Apr 2024 16:12:50 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/series/hardware-hacking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/hello_friend/</link>
+      <pubDate>Fri, 19 Apr 2024 16:12:50 -0400</pubDate>
+      <guid>http://localhost:1313/posts/hello_friend/</guid>
+      <description>Introduction Hello friend!</description>
+    </item>
+  </channel>
+</rss>
